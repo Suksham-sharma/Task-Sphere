@@ -15,7 +15,10 @@ export const Logo = () => {
       <div className="hover:opacity-75 transition items-center gap-x-2 hidden md:flex">
         <Image src={"/logo.svg"} alt="Logo" width={30} height={30} />
         <div
-          className={cn("text-lg text-neutral-700 pb-1", logoFont.className)}
+          className={cn(
+            "text-lg text-neutral-700 pb-1 mt-1 font-semibold",
+            logoFont.className
+          )}
         >
           TaskSphere
         </div>

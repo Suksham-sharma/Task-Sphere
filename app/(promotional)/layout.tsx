@@ -1,3 +1,4 @@
+import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 import { Navbar } from "./_components/navbar";
 
 interface LandingLayoutProps {
@@ -6,10 +7,11 @@ interface LandingLayoutProps {
 
 const LandingLayout = ({ children }: LandingLayoutProps) => {
   return (
-    <div className="h-full bg-slate-100">
+    <div className="h-full bg-black/[0.96] antialiased ">
       <Navbar />
-      <main className="pt-40 pb-20 bg-slate-100">{children} </main>
-      {/* Footer */}
+      <BackgroundBeamsWithCollision>
+        <main className="pt-40 z-10">{children} </main>
+      </BackgroundBeamsWithCollision>
     </div>
   );
 };
